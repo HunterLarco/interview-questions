@@ -1,7 +1,11 @@
 def selection_inplace(arr):
   for i in range(len(arr) - 1):
-    pocket_index, pocket = min(enumerate(arr[i] for i in range(i, len(arr))), key=lambda x: (x[1], x[0]))
-    arr[i], arr[pocket_index + i] = arr[pocket_index + i], arr[i]
+    pocket_index = i
+    for j in range(i + 1, len(arr)):
+      if arr[j] < arr[pocket_index]:
+        pocket_index = j
+    if pocket_index != i:
+      arr[i], arr[pocket_index] = arr[pocket_index], arr[i]
 
 def selection(arr):
   arr_copy = arr[:]
