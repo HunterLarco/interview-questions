@@ -1,4 +1,3 @@
-# TODO(hunterlarco) Preform this in-place.
 def quick_inplace(arr, start=0, end=-1):
   if len(arr) < 2: return
   if end < 0: end += len(arr)
