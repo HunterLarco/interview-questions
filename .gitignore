@@ -4,3 +4,21 @@
 # cython
 *.pyc
 __pycache__/
+
+# Bazel
+*~
+.*.swp
+/.classpath
+/.factorypath
+/.idea/
+/.project
+/.settings
+/WORKSPACE.user.bzl
+/bazel-bazel
+/bazel-bin
+/bazel-genfiles
+/bazel-io_bazel
+/bazel-out
+/bazel-testlogs
+/bazel.iml
+/output/
