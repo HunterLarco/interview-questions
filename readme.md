@@ -16,7 +16,7 @@ If you haven't installed `pip`, please install it via the instructions at [pip.p
 
 **Example Usage**
 
-`pylint [myfile]`
+`pylint --rcfile=pylint_config.rc [myfile1 myfile2 ...]`
 
 When you are `cd`'d into the root of this repository, you can use the following command to lint all python files in this repository.
 
