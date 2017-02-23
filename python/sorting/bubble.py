@@ -1,4 +1,15 @@
-def bubble_inplace(arr):
+# -*- coding: utf-8 -*-
+"""Bubble Sort implementation."""
+
+def bubble_sort(arr):
+  """Executes a bubble sort in-place.
+
+  To learn about bubble sort, visit https://en.wikipedia.org/wiki/Bubble_sort
+
+  Args:
+      arr (list of any comparable type): The list that will be sorted via
+          bubble sort.
+  """
   while True:
     preformed_swap = False
     for i in range(len(arr) - 1):
@@ -6,20 +17,20 @@ def bubble_inplace(arr):
         preformed_swap = True
         arr[i], arr[i + 1] = arr[i + 1], arr[i]
     if not preformed_swap:
-      return arr
+      break
 
-def bubble(arr):
+def bubble_sorted(arr):
+  """Executes a bubble sort out of place akin to python's "sorted" builtin.
+
+  To learn about bubble sort, visit https://en.wikipedia.org/wiki/Bubble_sort
+
+  Args:
+      arr (list of any comparable type): The list that will be sorted via
+          bubble sort.
+
+  Returns:
+      list of objects: A sorted copy of the parameter `arr`.
+  """
   arr_copy = arr[:]
-  bubble_inplace(arr_copy)
+  bubble_sort(arr_copy)
   return arr_copy
-
-def main():
-  assert bubble([]) == []
-  assert bubble([1, 2, 3, 4, 5]) == [1, 2, 3, 4, 5]
-  assert bubble([5, 4, 3, 2, 1]) == [1, 2, 3, 4, 5]
-  assert bubble([5, 2, 3, 4, 1]) == [1, 2, 3, 4, 5]
-  assert bubble([1, 5, 2, 4, 3]) == [1, 2, 3, 4, 5]
-  print "PASSED"
-
-if __name__ == '__main__':
-  main()
