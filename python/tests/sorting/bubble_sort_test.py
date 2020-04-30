@@ -36,7 +36,7 @@ class BubbleSortTest(custom_test_cases.SortingTestCase):
     self.assertEqual(bubble.bubble_sorted([1], section=slice(3, 5)), [])
 
   def test_reversedList_withSection_outOfPlace(self):
-    reversed_list = [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+    reversed_list = self.create_reversed_list(10)
     self.assertEqual(
         bubble.bubble_sorted(reversed_list, section=slice(2, -2)),
         [2, 3, 4, 5, 6, 7])
@@ -48,15 +48,15 @@ class BubbleSortTest(custom_test_cases.SortingTestCase):
         [3, 5, 7, 9])
 
   def test_reversedList_withSection_inPlace(self):
-    reversed_list = [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+    reversed_list = self.create_reversed_list(10)
     bubble.bubble_sort(reversed_list, section=slice(2, -2))
     self.assertEqual(reversed_list, [9, 8, 2, 3, 4, 5, 6, 7, 1, 0])
 
-    reversed_list = [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+    reversed_list = self.create_reversed_list(10)
     bubble.bubble_sort(reversed_list, section=slice(-2))
     self.assertEqual(reversed_list, [2, 3, 4, 5, 6, 7, 8, 9, 1, 0])
 
-    reversed_list = [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+    reversed_list = self.create_reversed_list(10)
     bubble.bubble_sort(reversed_list, section=slice(None, -2, 2))
     self.assertEqual(reversed_list, [3, 8, 5, 6, 7, 4, 9, 2, 1, 0])
 
