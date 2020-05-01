@@ -4,7 +4,7 @@ Over time I've encountered some very fun software engineering interview question
 
 ---
 
-![](https://github.com/hunterlarco/interview-problems/workflows/ci/badge.svg)
+![](https://github.com/hunterlarco/interview-questions/workflows/ci/badge.svg)
 
 ## Python Linter
 
