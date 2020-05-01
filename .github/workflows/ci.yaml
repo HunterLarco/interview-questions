@@ -18,7 +18,8 @@ jobs:
       with:
         path: "/home/runner/.cache/bazel"
         key: os:${{ matrix.os }}|bazel|workspace:${{ hashFiles('WORKSPACE') }}
-        restore-keys: os:${{ matrix.os }}|bazel|workspace:
+        restore-keys: |
+          os:${{ matrix.os }}|bazel|workspace:
 
     - name: Install Node.js
       uses: actions/setup-node@v1
