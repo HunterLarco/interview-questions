@@ -5,10 +5,10 @@ on:
 
 jobs:
   build-and-test:
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        runs-on: [ubuntu-latest, macos-latest, windows-latest]
-    runs-on: ${{ matrix.runs-on }}
+        os: [ubuntu-latest, macos-latest, windows-latest]
 
     steps:
     - uses: actions/checkout@v1
