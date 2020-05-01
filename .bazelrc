@@ -1,0 +1,8 @@
+# ----------------------------------- Output -----------------------------------
+
+# Only show compilation warnings for this workspace, not external dependencies.
+build --output_filter='^//'
+
+# By default, failing tests don't print any output, it's logged to a file
+# instead.
+test --test_output=errors

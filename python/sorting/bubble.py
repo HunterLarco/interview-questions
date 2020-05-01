@@ -12,6 +12,8 @@ def bubble_sort(arr, section=slice(None)):
       section (:obj:`slice`, optional): Determines the section of the provided
           list that will be sorted. Defaults to the entire array.
   """
+  if not arr:
+    return
   step = section.step if not section.step is None else 1
   while True:
     preformed_swap = False
