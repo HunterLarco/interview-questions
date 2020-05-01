@@ -4,6 +4,8 @@ Over time I've encountered some very fun software engineering interview question
 
 ---
 
+![](https://github.com/hunterlarco/interview-problems/workflows/ci/badge.svg)
+
 ## Python Linter
 
 In the interest of code quality, I've been using Google's python linter which maintains their open-sourced [Python Style Guide](http://google.github.io/styleguide/pyguide.html).
