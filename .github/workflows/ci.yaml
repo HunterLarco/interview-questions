@@ -17,9 +17,9 @@ jobs:
       uses: actions/cache@v1
       with:
         path: "/home/runner/.cache/bazel"
-        key: bazel|workspace:${{ hashFiles('WORKSPACE') }}
+        key: os:${{ matrix.os }}|bazel|workspace:${{ hashFiles('WORKSPACE') }}
         restore-keys: |
-          bazel|workspace:
+          os:${{ matrix.os }}|bazel|workspace:
 
     - name: Install bazelisk
       run: |
