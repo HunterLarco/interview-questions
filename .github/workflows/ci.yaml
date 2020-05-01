@@ -18,16 +18,16 @@ jobs:
       with:
         path: "/home/runner/.cache/bazel"
         key: os:${{ matrix.os }}|bazel|workspace:${{ hashFiles('WORKSPACE') }}
-        restore-keys: |
-          os:${{ matrix.os }}|bazel|workspace:
+        restore-keys: os:${{ matrix.os }}|bazel|workspace:
 
+    - name: Install Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
     - name: Install bazelisk
-      run: |
-        go get github.com/bazelbuild/bazelisk
+      run: npm install -g @bazel/bazelisk
 
     - name: Build
-      run: |
-        "${GITHUB_WORKSPACE}/bin/bazel" -c opt build //...
+      run: bazelisk -c opt build //...
     - name: Test
-      run: |
-        "${GITHUB_WORKSPACE}/bin/bazel" -c opt test //...
+      run: bazelisk -c opt test //...
