@@ -1,3 +1,5 @@
+# https://www.hackerrank.com/challenges/special-palindrome-again/problem
+
 class Sequence(object):
   def __init__(self, letter, count=1):
     self.letter = letter
